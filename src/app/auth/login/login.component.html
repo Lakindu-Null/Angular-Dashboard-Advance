@@ -1,0 +1,50 @@
+<body>
+    <div class="login-container">
+        <div class="form-container">
+            <div class="logo-container">
+                <img src="../../../assets/images/company-logo.png" alt="company-logo">
+                <div class="help-container">
+                    <i class="fa-regular fa-circle-question"></i>
+                    <h4>Help</h4>
+                </div>
+            </div>
+
+            <div class="form-wapper">
+                <div class="form-header">
+                    <h1>Login</h1>
+                    <h4>Hey 👋! Welcome back. Enter your credentials to login to your account.</h4>
+                </div>
+                <div class="form-body">
+                    <form [formGroup]="loginForm" (ngSubmit)="userLogin()">
+                        <div class="input-wrapper">
+                            <label class="label" for="email">User Name</label>
+                            <input class="input-style-1" id="email" type="text" placeholder="oliver"  formControlName="username"/>
+                        </div>
+                        <div class="input-wrapper">
+                            <label class="label" for="password">Password</label>
+                            <input class="input-style-1" id="password" type="password" placeholder="dwfge8cgwuyc"  formControlName="password" />
+                        </div>
+                        <div class="check-box-container">
+                            <div class="flex-gap-container">
+                                <p-checkbox [(ngModel)]="checked" [binary]="true" inputId="binary"></p-checkbox>
+                                <h4>Remember me</h4>
+                            </div>
+                            <h4 class="forgot">Forgot Password ? </h4>
+                        </div>
+                        <div class="login-button">
+                            <button [disabled]="!loginForm.valid||isLoading" class="button-style-1" type="submit">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-container">
+                <h4>Copyright ©2023 Uniro Paints. All rights reserved.</h4>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <img src="../../../assets/images/login-page-side.png" alt="side-image">
+        </div>
+    </div>
+</body>

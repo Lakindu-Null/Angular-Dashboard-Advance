@@ -1,0 +1,88 @@
+@import "../../../colors.scss";
+
+.body {
+    width: calc(100% - 8rem);
+    transition: all .5s ease;
+    background-color: $white;
+    margin-left: 8rem;
+}
+
+.body-trimmed {
+    width: calc(100% - 20rem);
+    margin-left: 20rem;
+}
+
+.body-md-screen {
+    width: calc(100% - 8rem);
+    margin-left: 8rem;
+}
+
+/* COMMON */
+.topbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    padding: 0 3rem;
+
+    i{
+        font-size: 18px;
+        color: $paragraph-color;
+        margin: auto 0;
+    }
+}
+
+/* SEARCH BAR */
+.search-bar{
+    display: flex;
+    gap: 18px;
+    margin: auto 0;
+    width: 100%;
+    
+    .search-box{
+        font-size: 16px;
+        padding-top: 2px;
+        outline: none;
+        border: none;
+        width: 90%;
+    }
+}
+
+/* ICON CONTAINER */
+.icon-container{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    i{
+        cursor: pointer;
+    }
+}
+.notification-box, .messages-box{
+    position: absolute;
+    top: 4rem;
+    z-index: 10;
+    background-color: $white;
+    min-width: 300px;
+    min-height: 200px;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.200);
+    animation: slideTopToBottom 300ms ease-in-out;
+}
+
+.notification-box{
+    right: 3rem;
+}
+.messages-box{
+    right: 3rem;
+}
+
+/* ANIMATION */
+@keyframes slideTopToBottom {
+    from {
+      transform: translateY(+50px);
+    }
+    to {
+      transform: translateY(0);
+    }
+}
